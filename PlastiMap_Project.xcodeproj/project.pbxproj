@@ -1,0 +1,559 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		06F41AD52BC5BF1900AA19DF /* PlastiMap_ProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F41AD42BC5BF1900AA19DF /* PlastiMap_ProjectApp.swift */; };
+		06F41AD72BC5BF1900AA19DF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F41AD62BC5BF1900AA19DF /* ContentView.swift */; };
+		06F41AD92BC5BF1A00AA19DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06F41AD82BC5BF1A00AA19DF /* Assets.xcassets */; };
+		06F41ADC2BC5BF1A00AA19DF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06F41ADB2BC5BF1A00AA19DF /* Preview Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		06F41AE22BC5BF1A00AA19DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 06F41AC92BC5BF1900AA19DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 06F41AD02BC5BF1900AA19DF;
+			remoteInfo = PlastiMap_Project;
+		};
+		06F41AEC2BC5BF1A00AA19DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 06F41AC92BC5BF1900AA19DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 06F41AD02BC5BF1900AA19DF;
+			remoteInfo = PlastiMap_Project;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		06F41AD12BC5BF1900AA19DF /* PlastiMap_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlastiMap_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		06F41AD42BC5BF1900AA19DF /* PlastiMap_ProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlastiMap_ProjectApp.swift; sourceTree = "<group>"; };
+		06F41AD62BC5BF1900AA19DF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		06F41AD82BC5BF1A00AA19DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		06F41ADB2BC5BF1A00AA19DF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		06F41AE12BC5BF1A00AA19DF /* PlastiMap_ProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlastiMap_ProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		06F41AEB2BC5BF1A00AA19DF /* PlastiMap_ProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlastiMap_ProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		06F41ACE2BC5BF1900AA19DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06F41ADE2BC5BF1A00AA19DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06F41AE82BC5BF1A00AA19DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		06F41AC82BC5BF1900AA19DF = {
+			isa = PBXGroup;
+			children = (
+				06F41AD32BC5BF1900AA19DF /* PlastiMap_Project */,
+				06F41AD22BC5BF1900AA19DF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		06F41AD22BC5BF1900AA19DF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				06F41AD12BC5BF1900AA19DF /* PlastiMap_Project.app */,
+				06F41AE12BC5BF1A00AA19DF /* PlastiMap_ProjectTests.xctest */,
+				06F41AEB2BC5BF1A00AA19DF /* PlastiMap_ProjectUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		06F41AD32BC5BF1900AA19DF /* PlastiMap_Project */ = {
+			isa = PBXGroup;
+			children = (
+				06F41AD42BC5BF1900AA19DF /* PlastiMap_ProjectApp.swift */,
+				06F41AD62BC5BF1900AA19DF /* ContentView.swift */,
+				06F41AD82BC5BF1A00AA19DF /* Assets.xcassets */,
+				06F41ADA2BC5BF1A00AA19DF /* Preview Content */,
+			);
+			path = PlastiMap_Project;
+			sourceTree = "<group>";
+		};
+		06F41ADA2BC5BF1A00AA19DF /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				06F41ADB2BC5BF1A00AA19DF /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		06F41AD02BC5BF1900AA19DF /* PlastiMap_Project */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06F41AF52BC5BF1A00AA19DF /* Build configuration list for PBXNativeTarget "PlastiMap_Project" */;
+			buildPhases = (
+				06F41ACD2BC5BF1900AA19DF /* Sources */,
+				06F41ACE2BC5BF1900AA19DF /* Frameworks */,
+				06F41ACF2BC5BF1900AA19DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PlastiMap_Project;
+			productName = PlastiMap_Project;
+			productReference = 06F41AD12BC5BF1900AA19DF /* PlastiMap_Project.app */;
+			productType = "com.apple.product-type.application";
+		};
+		06F41AE02BC5BF1A00AA19DF /* PlastiMap_ProjectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06F41AF82BC5BF1A00AA19DF /* Build configuration list for PBXNativeTarget "PlastiMap_ProjectTests" */;
+			buildPhases = (
+				06F41ADD2BC5BF1A00AA19DF /* Sources */,
+				06F41ADE2BC5BF1A00AA19DF /* Frameworks */,
+				06F41ADF2BC5BF1A00AA19DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				06F41AE32BC5BF1A00AA19DF /* PBXTargetDependency */,
+			);
+			name = PlastiMap_ProjectTests;
+			productName = PlastiMap_ProjectTests;
+			productReference = 06F41AE12BC5BF1A00AA19DF /* PlastiMap_ProjectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		06F41AEA2BC5BF1A00AA19DF /* PlastiMap_ProjectUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06F41AFB2BC5BF1A00AA19DF /* Build configuration list for PBXNativeTarget "PlastiMap_ProjectUITests" */;
+			buildPhases = (
+				06F41AE72BC5BF1A00AA19DF /* Sources */,
+				06F41AE82BC5BF1A00AA19DF /* Frameworks */,
+				06F41AE92BC5BF1A00AA19DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				06F41AED2BC5BF1A00AA19DF /* PBXTargetDependency */,
+			);
+			name = PlastiMap_ProjectUITests;
+			productName = PlastiMap_ProjectUITests;
+			productReference = 06F41AEB2BC5BF1A00AA19DF /* PlastiMap_ProjectUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		06F41AC92BC5BF1900AA19DF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					06F41AD02BC5BF1900AA19DF = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					06F41AE02BC5BF1A00AA19DF = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 06F41AD02BC5BF1900AA19DF;
+					};
+					06F41AEA2BC5BF1A00AA19DF = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 06F41AD02BC5BF1900AA19DF;
+					};
+				};
+			};
+			buildConfigurationList = 06F41ACC2BC5BF1900AA19DF /* Build configuration list for PBXProject "PlastiMap_Project" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 06F41AC82BC5BF1900AA19DF;
+			productRefGroup = 06F41AD22BC5BF1900AA19DF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				06F41AD02BC5BF1900AA19DF /* PlastiMap_Project */,
+				06F41AE02BC5BF1A00AA19DF /* PlastiMap_ProjectTests */,
+				06F41AEA2BC5BF1A00AA19DF /* PlastiMap_ProjectUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		06F41ACF2BC5BF1900AA19DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06F41ADC2BC5BF1A00AA19DF /* Preview Assets.xcassets in Resources */,
+				06F41AD92BC5BF1A00AA19DF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06F41ADF2BC5BF1A00AA19DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06F41AE92BC5BF1A00AA19DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		06F41ACD2BC5BF1900AA19DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06F41AD72BC5BF1900AA19DF /* ContentView.swift in Sources */,
+				06F41AD52BC5BF1900AA19DF /* PlastiMap_ProjectApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06F41ADD2BC5BF1A00AA19DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06F41AE72BC5BF1A00AA19DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		06F41AE32BC5BF1A00AA19DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 06F41AD02BC5BF1900AA19DF /* PlastiMap_Project */;
+			targetProxy = 06F41AE22BC5BF1A00AA19DF /* PBXContainerItemProxy */;
+		};
+		06F41AED2BC5BF1A00AA19DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 06F41AD02BC5BF1900AA19DF /* PlastiMap_Project */;
+			targetProxy = 06F41AEC2BC5BF1A00AA19DF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		06F41AF32BC5BF1A00AA19DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		06F41AF42BC5BF1A00AA19DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		06F41AF62BC5BF1A00AA19DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PlastiMap_Project/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.PlastiMap-Project";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		06F41AF72BC5BF1A00AA19DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PlastiMap_Project/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.PlastiMap-Project";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		06F41AF92BC5BF1A00AA19DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.PlastiMap-ProjectTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlastiMap_Project.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PlastiMap_Project";
+			};
+			name = Debug;
+		};
+		06F41AFA2BC5BF1A00AA19DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.PlastiMap-ProjectTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlastiMap_Project.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PlastiMap_Project";
+			};
+			name = Release;
+		};
+		06F41AFC2BC5BF1A00AA19DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.PlastiMap-ProjectUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PlastiMap_Project;
+			};
+			name = Debug;
+		};
+		06F41AFD2BC5BF1A00AA19DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.PlastiMap-ProjectUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PlastiMap_Project;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		06F41ACC2BC5BF1900AA19DF /* Build configuration list for PBXProject "PlastiMap_Project" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06F41AF32BC5BF1A00AA19DF /* Debug */,
+				06F41AF42BC5BF1A00AA19DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		06F41AF52BC5BF1A00AA19DF /* Build configuration list for PBXNativeTarget "PlastiMap_Project" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06F41AF62BC5BF1A00AA19DF /* Debug */,
+				06F41AF72BC5BF1A00AA19DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		06F41AF82BC5BF1A00AA19DF /* Build configuration list for PBXNativeTarget "PlastiMap_ProjectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06F41AF92BC5BF1A00AA19DF /* Debug */,
+				06F41AFA2BC5BF1A00AA19DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		06F41AFB2BC5BF1A00AA19DF /* Build configuration list for PBXNativeTarget "PlastiMap_ProjectUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06F41AFC2BC5BF1A00AA19DF /* Debug */,
+				06F41AFD2BC5BF1A00AA19DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 06F41AC92BC5BF1900AA19DF /* Project object */;
+}
