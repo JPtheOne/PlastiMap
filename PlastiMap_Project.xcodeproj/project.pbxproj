@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		06F41AD52BC5BF1900AA19DF /* PlastiMap_ProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F41AD42BC5BF1900AA19DF /* PlastiMap_ProjectApp.swift */; };
-		06F41AD72BC5BF1900AA19DF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F41AD62BC5BF1900AA19DF /* ContentView.swift */; };
+		06F41AD72BC5BF1900AA19DF /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F41AD62BC5BF1900AA19DF /* WelcomeView.swift */; };
 		06F41AD92BC5BF1A00AA19DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06F41AD82BC5BF1A00AA19DF /* Assets.xcassets */; };
 		06F41ADC2BC5BF1A00AA19DF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06F41ADB2BC5BF1A00AA19DF /* Preview Assets.xcassets */; };
+		06F41AFF2BC5C3A500AA19DF /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F41AFE2BC5C3A500AA19DF /* MenuView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,11 +34,12 @@
 /* Begin PBXFileReference section */
 		06F41AD12BC5BF1900AA19DF /* PlastiMap_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlastiMap_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06F41AD42BC5BF1900AA19DF /* PlastiMap_ProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlastiMap_ProjectApp.swift; sourceTree = "<group>"; };
-		06F41AD62BC5BF1900AA19DF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		06F41AD62BC5BF1900AA19DF /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		06F41AD82BC5BF1A00AA19DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06F41ADB2BC5BF1A00AA19DF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		06F41AE12BC5BF1A00AA19DF /* PlastiMap_ProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlastiMap_ProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		06F41AEB2BC5BF1A00AA19DF /* PlastiMap_ProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlastiMap_ProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		06F41AFE2BC5C3A500AA19DF /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +89,8 @@
 			isa = PBXGroup;
 			children = (
 				06F41AD42BC5BF1900AA19DF /* PlastiMap_ProjectApp.swift */,
-				06F41AD62BC5BF1900AA19DF /* ContentView.swift */,
+				06F41AD62BC5BF1900AA19DF /* WelcomeView.swift */,
+				06F41AFE2BC5C3A500AA19DF /* MenuView.swift */,
 				06F41AD82BC5BF1A00AA19DF /* Assets.xcassets */,
 				06F41ADA2BC5BF1A00AA19DF /* Preview Content */,
 			);
@@ -232,7 +235,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06F41AD72BC5BF1900AA19DF /* ContentView.swift in Sources */,
+				06F41AD72BC5BF1900AA19DF /* WelcomeView.swift in Sources */,
+				06F41AFF2BC5C3A500AA19DF /* MenuView.swift in Sources */,
 				06F41AD52BC5BF1900AA19DF /* PlastiMap_ProjectApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

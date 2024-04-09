@@ -11,7 +11,7 @@ import SwiftUI
 struct PlastiMap_ProjectApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            WelcomeView()
         }
     }
 }
