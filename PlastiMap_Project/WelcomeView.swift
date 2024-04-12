@@ -20,7 +20,7 @@ struct WelcomeView: View {
                     
                     Spacer().frame(height: 50)
                     
-                    NavigationLink(destination: MenuView()) {
+                    NavigationLink(destination: MenuTabView()) {
                         Text("Continue")
                             .bold()
                             .frame(minWidth: 0, maxWidth: .infinity)
