@@ -2,44 +2,69 @@ import SwiftUI
 import MapKit
 
 struct Map_TestView: View {
-    var body: some View {
-        VStack {
-            Text("Mapa de Puebla")
-                .font(.largeTitle)
-                .padding()
+    @State private var selectedAnnotationInfo: String? = "Select a point to see details"
 
-            MapComponent()
-                .frame(height: 300)  // Define el alto del marco del mapa
-                .cornerRadius(15)
-                .padding()
+    var body: some View {
+        NavigationView {
+            ZStack(alignment: .top) {
+                Image("plant_bg")
+                    .resizable()
+                    .scaledToFill()
+                    .edgesIgnoringSafeArea(.all)
+
+                VStack {
+                    Text("Mapa de Puebla")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(Color.green.opacity(0.7))
+                        .cornerRadius(10)
+                        .padding(.top, 44)
+                    
+
+                    MapComponent(selectedAnnotationInfo: $selectedAnnotationInfo)
+                        .frame(height: 300)
+                        .cornerRadius(15)
+                        .padding()
+
+                    // Permanent Info Box
+                    Text(selectedAnnotationInfo ?? "No selection")
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.white)
+                        .cornerRadius(8)
+                        .shadow(radius: 5)
+                        .padding()
+                }
+            }
         }
     }
 }
 
 struct MapComponent: UIViewRepresentable {
+    @Binding var selectedAnnotationInfo: String?
     let coordinates = [
         CLLocationCoordinate2D(latitude: 19.04799561392173, longitude: -98.30354892001462),
-        CLLocationCoordinate2D(latitude: 19.0500, longitude: -98.2000), // Ejemplo de otra ubicación en Puebla
-        CLLocationCoordinate2D(latitude: 19.0440, longitude: -98.1980)  // Otro punto de interés
+        CLLocationCoordinate2D(latitude: 19.0500, longitude: -98.2000),
+        CLLocationCoordinate2D(latitude: 19.0440, longitude: -98.1980)
     ]
 
     func makeUIView(context: Context) -> MKMapView {
         let mapView = MKMapView(frame: .zero)
         mapView.delegate = context.coordinator
 
-        // Configura la región alrededor del primer punto de interés
         let region = MKCoordinateRegion(
-            center: coordinates.first!, // Asume que siempre hay al menos un punto
-            span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)  // Ajusta el nivel de zoom aquí
+            center: coordinates.first!,
+            span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
         )
         mapView.setRegion(region, animated: true)
 
-        // Añade múltiples anotaciones al mapa
         for coordinate in coordinates {
             let annotation = MKPointAnnotation()
             annotation.coordinate = coordinate
-            annotation.title = "Punto de Interés"
-            annotation.subtitle = "Detalles adicionales aquí"
+            annotation.title = "Plásticos Jimenez"
+            annotation.subtitle = "Pet - $10/Kg"
             mapView.addAnnotation(annotation)
         }
 
@@ -47,7 +72,7 @@ struct MapComponent: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: MKMapView, context: Context) {
-        // No es necesario actualizar la vista en este ejemplo, ya que los datos son estáticos.
+        // Map view updates are not necessary as data is static
     }
     
     func makeCoordinator() -> Coordinator {
@@ -61,19 +86,10 @@ struct MapComponent: UIViewRepresentable {
             self.parent = parent
         }
         
-        func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-            let identifier = "Placemark"
-            var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKPinAnnotationView
-            
-            if annotationView == nil {
-                annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-                annotationView?.canShowCallout = true
-                annotationView?.pinTintColor = .red
-            } else {
-                annotationView?.annotation = annotation
+        func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+            if let annotation = view.annotation as? MKPointAnnotation {
+                parent.selectedAnnotationInfo = "\(annotation.title ?? "Unknown") - \(annotation.subtitle ?? "No details provided")"
             }
-            
-            return annotationView
         }
     }
 }

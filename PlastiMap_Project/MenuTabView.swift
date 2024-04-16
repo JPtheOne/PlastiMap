@@ -22,7 +22,7 @@ struct MenuTabView: View {
                 }
                 .background(Color.white) // Fondo blanco para el contenido de este tab
             
-            SellsView()
+            SellView()
                 .tabItem {
                     Image(systemName: "dollarsign.circle.fill")
                     Text("Venta")

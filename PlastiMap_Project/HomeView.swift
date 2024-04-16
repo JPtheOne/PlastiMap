@@ -8,12 +8,15 @@ struct RecyclableItem { // Items can be added if needed
 struct HomeView: View {
     let recyclableItems: [RecyclableItem] = [
         RecyclableItem(imageName: "pet", title: "PET"),
-        RecyclableItem(imageName: "steel", title: "Fierros viejos"),
+        RecyclableItem(imageName: "F", title: "Fierros viejos"),
+        RecyclableItem(imageName: "steel", title:" Acero"),
+        RecyclableItem(imageName: "wood", title:"Madera"),
+        RecyclableItem(imageName: "cloth", title: "Tela"),
+        RecyclableItem(imageName: "battery", title: "Baterías")
     ]
-    
+
     var body: some View {
         NavigationView {
-            
             ScrollView {
                 VStack(spacing: 20) {
                     Text("Página Principal")
@@ -23,26 +26,25 @@ struct HomeView: View {
                         .padding()
                         .background(Color.green.opacity(0.7))
                         .cornerRadius(10)
-                        .padding(.top, 44) // Padding para compensar el área segura en la parte superior
+                        .padding(.top, 44) // Padding to compensate for the safe area at the top
                     
                     LazyVGrid(columns: [GridItem(.adaptive(minimum: 150))], spacing: 20) {
                         ForEach(recyclableItems, id: \.title) { item in
                             NavigationLink(destination: RecycleMapViewController(item: item)) {
                                 ZStack {
-                                    // Usar Image como fondo, asegúrate de que estas imágenes existan en tus assets
-                                    Image(item.imageName)
+                                    Image(item.imageName) // Use image as background, make sure these images exist in your assets
                                         .resizable()
                                         .scaledToFill()
                                         .frame(width: 150, height: 150)
-                                        .cornerRadius(8)
                                         .clipped()
 
                                     Text(item.title)
                                         .foregroundColor(.white)
-                                        .font(.headline) // Ajusta el estilo de la fuente si es necesario
+                                        .font(.headline) // Adjust font style if necessary
                                 }
-                                .frame(width: 150, height: 150) // Ajusta estos valores según el diseño que prefieras
+                                .background(Color.white.opacity(0.5)) // Applying the background to the whole ZStack
                                 .cornerRadius(8)
+                                .frame(width: 150, height: 150) // Set frame for ZStack to control size
                             }
                         }
                     }
@@ -50,12 +52,11 @@ struct HomeView: View {
                 .padding()
             }
             .background(
-                Image("plant_bg") // Asegúrate de tener esta imagen en tus assets
+                Image("plant_bg")
                     .resizable()
                     .scaledToFill()
                     .edgesIgnoringSafeArea(.all)
             )
-         
         }
     }
 }
@@ -68,7 +69,7 @@ struct RecycleMapViewController: View {
     }
 }
 
-// Vista de previsualización
+// Preview Provider
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()

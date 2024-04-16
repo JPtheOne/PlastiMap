@@ -33,12 +33,11 @@ struct WelcomeView: View {
                 }
                 .padding()
             }
+            .navigationBarHidden(true) // Hide the navigation bar
         }
         .navigationViewStyle(StackNavigationViewStyle()) // This line is added to ensure compatibility with all devices.
     }
 }
-
-
 
 struct WelcomeView_Previews: PreviewProvider {
     static var previews: some View {
