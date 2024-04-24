@@ -21,6 +21,7 @@ struct WelcomeView: View {
                     Spacer().frame(height: 50)
                     
                     NavigationLink(destination: MenuTabView()) {
+                        
                         Text("Continue")
                             .bold()
                             .frame(minWidth: 0, maxWidth: .infinity)
@@ -34,6 +35,8 @@ struct WelcomeView: View {
                 .padding()
             }
             .navigationBarHidden(true) // Hide the navigation bar
+            .navigationBarBackButtonHidden(true)
+            
         }
         .navigationViewStyle(StackNavigationViewStyle()) // This line is added to ensure compatibility with all devices.
     }

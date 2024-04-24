@@ -29,30 +29,44 @@ struct Map_TestView: View {
                         .padding()
 
                     if let info = selectedAnnotationInfo {
-                        HStack {
-                            Image("store")  // Imagen de placeholder visible solo tras selección
-                                .resizable()
-                                .frame(width: 50, height: 50)
-                                .clipShape(Circle())
-                                .shadow(radius: 5)
-                            
-                            VStack(alignment: .leading) {
-                                ForEach(info.split(separator: "\n"), id: \.self) { line in
-                                    Text(line)
-                                        .fontWeight(.medium)
-                                        .lineLimit(nil)  // Permite múltiples líneas
-                                        .fixedSize(horizontal: false, vertical: true)  // Asegura que el texto se ajuste verticalmente
-                                        .padding(.leading, 8)
+                        VStack {
+                            HStack {
+                                Image("store")  // Imagen de placeholder visible solo tras selección
+                                    .resizable()
+                                    .frame(width: 50, height: 50)
+                                    .clipShape(Circle())
+                                    .shadow(radius: 5)
+                                
+                                VStack(alignment: .leading) {
+                                    ForEach(info.split(separator: "\n"), id: \.self) { line in
+                                        Text(line)
+                                            .fontWeight(.medium)
+                                            .lineLimit(nil)  // Permite múltiples líneas
+                                            .fixedSize(horizontal: false, vertical: true)  // Asegura que el texto se ajuste verticalmente
+                                            .padding(.leading, 8)
+                                    }
+                                }
+                                .frame(maxWidth: .infinity, alignment: .leading)  // Asegura que el texto use todo el ancho disponible
+                            }
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(Color.white)
+                            .cornerRadius(8)
+                            .shadow(radius: 5)
+                            .padding()
+
+                            Button("Ver en mapa") {
+                                if let item = item {
+                                    let url = URL(string: "http://maps.apple.com/?ll=\(item.coordinate.latitude),\(item.coordinate.longitude)")!
+                                    UIApplication.shared.open(url)
                                 }
                             }
-                            .frame(maxWidth: .infinity, alignment: .leading)  // Asegura que el texto use todo el ancho disponible
+                            .padding()
+                            .background(Color.blue)
+                            .foregroundColor(.white)
+                            .cornerRadius(8)
+                            .padding(.bottom)
                         }
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .background(Color.white)
-                        .cornerRadius(8)
-                        .shadow(radius: 5)
-                        .padding()
                     } else {
                         Text("No hay selección")
                             .padding()
