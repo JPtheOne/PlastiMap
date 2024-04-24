@@ -1,14 +1,25 @@
 //
-//  PlastiMap_ProjectApp.swift
-//  PlastiMap_Project
+//  FireBaseTestApp.swift
+//  FireBaseTest
 //
-//  Created by iOS Lab on 09/04/24.
+//  Created by Daniel Gonzalez on 27/02/24.
 //
 
 import SwiftUI
+import FirebaseCore
+
+class AppDelegate: NSObject, UIApplicationDelegate {
+  func application(_ application: UIApplication,
+                   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+    FirebaseApp.configure()
+
+    return true
+  }
+}
 
 @main
-struct PlastiMap_ProjectApp: App {
+struct FireBaseTestApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     var body: some Scene {
         WindowGroup {
             WelcomeView()
