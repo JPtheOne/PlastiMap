@@ -2,8 +2,8 @@ import SwiftUI
 import MapKit
 
 struct Map_TestView: View {
-    @State private var selectedAnnotationInfo: String? = "Seleccione un punto para ver más"
-    var item: RecyclableItem? // This is now an optional parameter
+    @State private var selectedAnnotationInfo: String? = nil  // Inicialmente sin información seleccionada
+    var item: RecyclableItem?  // Este parámetro es opcional
 
     var body: some View {
         NavigationView {
@@ -28,13 +28,40 @@ struct Map_TestView: View {
                         .cornerRadius(15)
                         .padding()
 
-                    Text(selectedAnnotationInfo ?? "No selection")
+                    if let info = selectedAnnotationInfo {
+                        HStack {
+                            Image("store")  // Imagen de placeholder visible solo tras selección
+                                .resizable()
+                                .frame(width: 50, height: 50)
+                                .clipShape(Circle())
+                                .shadow(radius: 5)
+                            
+                            VStack(alignment: .leading) {
+                                ForEach(info.split(separator: "\n"), id: \.self) { line in
+                                    Text(line)
+                                        .fontWeight(.medium)
+                                        .lineLimit(nil)  // Permite múltiples líneas
+                                        .fixedSize(horizontal: false, vertical: true)  // Asegura que el texto se ajuste verticalmente
+                                        .padding(.leading, 8)
+                                }
+                            }
+                            .frame(maxWidth: .infinity, alignment: .leading)  // Asegura que el texto use todo el ancho disponible
+                        }
                         .padding()
                         .frame(maxWidth: .infinity)
                         .background(Color.white)
                         .cornerRadius(8)
                         .shadow(radius: 5)
                         .padding()
+                    } else {
+                        Text("No hay selección")
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(Color.white)
+                            .cornerRadius(8)
+                            .shadow(radius: 5)
+                            .padding()
+                    }
                 }
             }
         }
@@ -62,30 +89,31 @@ struct MapComponent: UIViewRepresentable {
             let annotation = MKPointAnnotation()
             annotation.coordinate = item.coordinate
             annotation.title = item.title
+            annotation.subtitle = "\(item.description)\nPrecio por kilo: $\(item.pricePerKilo) kg"
             mapView.addAnnotation(annotation)
         }
 
         return mapView
     }
-    
+
     func updateUIView(_ uiView: MKMapView, context: Context) {
-        // No need to update annotations dynamically in this example
+        // No updates needed for this static example
     }
 
     func makeCoordinator() -> Coordinator {
         Coordinator(self)
     }
-    
+
     class Coordinator: NSObject, MKMapViewDelegate {
         var parent: MapComponent
-        
+
         init(_ parent: MapComponent) {
             self.parent = parent
         }
-        
+
         func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
             if let annotation = view.annotation as? MKPointAnnotation {
-                parent.selectedAnnotationInfo = "\(annotation.title ?? "Unknown") - \(annotation.subtitle ?? "No details provided")"
+                parent.selectedAnnotationInfo = "\(annotation.title ?? "Desconocido") - \(annotation.subtitle ?? "No hay detalles")"
             }
         }
     }
@@ -93,6 +121,6 @@ struct MapComponent: UIViewRepresentable {
 
 struct Map_TestView_Previews: PreviewProvider {
     static var previews: some View {
-        Map_TestView()  // Preview with all items
+        Map_TestView()
     }
 }
