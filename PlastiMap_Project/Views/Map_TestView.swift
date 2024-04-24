@@ -2,7 +2,8 @@ import SwiftUI
 import MapKit
 
 struct Map_TestView: View {
-    @State private var selectedAnnotationInfo: String? = "Select a point to see details"
+    @State private var selectedAnnotationInfo: String? = "Seleccione un punto para ver más"
+    var item: RecyclableItem? // This is now an optional parameter
 
     var body: some View {
         NavigationView {
@@ -13,7 +14,7 @@ struct Map_TestView: View {
                     .edgesIgnoringSafeArea(.all)
 
                 VStack {
-                    Text("Mapa de Puebla")
+                    Text(item != nil ? "Mapa de \(item!.title)" : "Mapa General")
                         .font(.largeTitle)
                         .fontWeight(.bold)
                         .foregroundColor(.white)
@@ -21,14 +22,12 @@ struct Map_TestView: View {
                         .background(Color.green.opacity(0.7))
                         .cornerRadius(10)
                         .padding(.top, 44)
-                    
 
-                    MapComponent(selectedAnnotationInfo: $selectedAnnotationInfo)
+                    MapComponent(selectedAnnotationInfo: $selectedAnnotationInfo, item: item)
                         .frame(height: 300)
                         .cornerRadius(15)
                         .padding()
 
-                    // Permanent Info Box
                     Text(selectedAnnotationInfo ?? "No selection")
                         .padding()
                         .frame(maxWidth: .infinity)
@@ -44,27 +43,25 @@ struct Map_TestView: View {
 
 struct MapComponent: UIViewRepresentable {
     @Binding var selectedAnnotationInfo: String?
-    let coordinates = [
-        CLLocationCoordinate2D(latitude: 19.04799561392173, longitude: -98.30354892001462),
-        CLLocationCoordinate2D(latitude: 19.0500, longitude: -98.2000),
-        CLLocationCoordinate2D(latitude: 19.0440, longitude: -98.1980)
-    ]
+    var item: RecyclableItem?
 
     func makeUIView(context: Context) -> MKMapView {
         let mapView = MKMapView(frame: .zero)
         mapView.delegate = context.coordinator
 
+        let items = item != nil ? [item!] : RecyclableItem.allItems
+        let centerCoordinate = item?.coordinate ?? CLLocationCoordinate2D(latitude: 19.0430, longitude: -98.2010)
+
         let region = MKCoordinateRegion(
-            center: coordinates.first!,
-            span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+            center: centerCoordinate,
+            span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
         )
         mapView.setRegion(region, animated: true)
 
-        for coordinate in coordinates {
+        for item in items {
             let annotation = MKPointAnnotation()
-            annotation.coordinate = coordinate
-            annotation.title = "Plásticos Jimenez"
-            annotation.subtitle = "Pet - $10/Kg"
+            annotation.coordinate = item.coordinate
+            annotation.title = item.title
             mapView.addAnnotation(annotation)
         }
 
@@ -72,9 +69,9 @@ struct MapComponent: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: MKMapView, context: Context) {
-        // Map view updates are not necessary as data is static
+        // No need to update annotations dynamically in this example
     }
-    
+
     func makeCoordinator() -> Coordinator {
         Coordinator(self)
     }
@@ -96,6 +93,6 @@ struct MapComponent: UIViewRepresentable {
 
 struct Map_TestView_Previews: PreviewProvider {
     static var previews: some View {
-        Map_TestView()
+        Map_TestView()  // Preview with all items
     }
 }

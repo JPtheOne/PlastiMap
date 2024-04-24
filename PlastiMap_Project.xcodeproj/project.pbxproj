@@ -12,6 +12,7 @@
 		064056382BC8901C00A40F96 /* Map_TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064056372BC8901C00A40F96 /* Map_TestView.swift */; };
 		0640563A2BC997D700A40F96 /* MenuTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064056392BC997D700A40F96 /* MenuTabView.swift */; };
 		0640563C2BC997EB00A40F96 /* SellsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0640563B2BC997EB00A40F96 /* SellsView.swift */; };
+		065105CD2BD9AF8800836379 /* RecyclableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065105CC2BD9AF8800836379 /* RecyclableItem.swift */; };
 		0692AC622BCEF4240013FBD6 /* ManageStoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0692AC612BCEF4240013FBD6 /* ManageStoreView.swift */; };
 		06F41AD52BC5BF1900AA19DF /* PlastiMap_ProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F41AD42BC5BF1900AA19DF /* PlastiMap_ProjectApp.swift */; };
 		06F41AD72BC5BF1900AA19DF /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F41AD62BC5BF1900AA19DF /* WelcomeView.swift */; };
@@ -43,6 +44,7 @@
 		064056372BC8901C00A40F96 /* Map_TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map_TestView.swift; sourceTree = "<group>"; };
 		064056392BC997D700A40F96 /* MenuTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTabView.swift; sourceTree = "<group>"; };
 		0640563B2BC997EB00A40F96 /* SellsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellsView.swift; sourceTree = "<group>"; };
+		065105CC2BD9AF8800836379 /* RecyclableItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecyclableItem.swift; sourceTree = "<group>"; };
 		0692AC612BCEF4240013FBD6 /* ManageStoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageStoreView.swift; sourceTree = "<group>"; };
 		06F41AD12BC5BF1900AA19DF /* PlastiMap_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlastiMap_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06F41AD42BC5BF1900AA19DF /* PlastiMap_ProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlastiMap_ProjectApp.swift; sourceTree = "<group>"; };
@@ -79,9 +81,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		065105CA2BD9683600836379 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0640563B2BC997EB00A40F96 /* SellsView.swift */,
+				0692AC612BCEF4240013FBD6 /* ManageStoreView.swift */,
+				064056372BC8901C00A40F96 /* Map_TestView.swift */,
+				064056352BC88F0700A40F96 /* ProfileView.swift */,
+				064056392BC997D700A40F96 /* MenuTabView.swift */,
+				064056332BC88EF400A40F96 /* SellView.swift */,
+				06F41AFE2BC5C3A500AA19DF /* HomeView.swift */,
+				06F41AD62BC5BF1900AA19DF /* WelcomeView.swift */,
+				065105CB2BD9AF6700836379 /* Models */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		065105CB2BD9AF6700836379 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				065105CC2BD9AF8800836379 /* RecyclableItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		06F41AC82BC5BF1900AA19DF = {
 			isa = PBXGroup;
 			children = (
+				06F41AD42BC5BF1900AA19DF /* PlastiMap_ProjectApp.swift */,
 				06F41AD32BC5BF1900AA19DF /* PlastiMap_Project */,
 				06F41AD22BC5BF1900AA19DF /* Products */,
 			);
@@ -100,17 +127,9 @@
 		06F41AD32BC5BF1900AA19DF /* PlastiMap_Project */ = {
 			isa = PBXGroup;
 			children = (
-				06F41AD42BC5BF1900AA19DF /* PlastiMap_ProjectApp.swift */,
-				06F41AD62BC5BF1900AA19DF /* WelcomeView.swift */,
-				06F41AFE2BC5C3A500AA19DF /* HomeView.swift */,
+				065105CA2BD9683600836379 /* Views */,
 				06F41AD82BC5BF1A00AA19DF /* Assets.xcassets */,
 				06F41ADA2BC5BF1A00AA19DF /* Preview Content */,
-				064056332BC88EF400A40F96 /* SellView.swift */,
-				064056352BC88F0700A40F96 /* ProfileView.swift */,
-				064056372BC8901C00A40F96 /* Map_TestView.swift */,
-				064056392BC997D700A40F96 /* MenuTabView.swift */,
-				0640563B2BC997EB00A40F96 /* SellsView.swift */,
-				0692AC612BCEF4240013FBD6 /* ManageStoreView.swift */,
 			);
 			path = PlastiMap_Project;
 			sourceTree = "<group>";
@@ -255,6 +274,7 @@
 			files = (
 				0640563C2BC997EB00A40F96 /* SellsView.swift in Sources */,
 				0692AC622BCEF4240013FBD6 /* ManageStoreView.swift in Sources */,
+				065105CD2BD9AF8800836379 /* RecyclableItem.swift in Sources */,
 				06F41AD72BC5BF1900AA19DF /* WelcomeView.swift in Sources */,
 				064056382BC8901C00A40F96 /* Map_TestView.swift in Sources */,
 				0640563A2BC997D700A40F96 /* MenuTabView.swift in Sources */,

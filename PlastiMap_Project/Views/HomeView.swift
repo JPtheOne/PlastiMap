@@ -1,19 +1,9 @@
 import SwiftUI
-
-struct RecyclableItem { // Items can be added if needed
-    var imageName: String
-    var title: String
-}
+import MapKit
 
 struct HomeView: View {
-    let recyclableItems: [RecyclableItem] = [
-        RecyclableItem(imageName: "pet", title: "PET"),
-        RecyclableItem(imageName: "F", title: "Fierros viejos"),
-        RecyclableItem(imageName: "steel", title:" Acero"),
-        RecyclableItem(imageName: "wood", title:"Madera"),
-        RecyclableItem(imageName: "cloth", title: "Tela"),
-        RecyclableItem(imageName: "battery", title: "Baterías")
-    ]
+    // Access the shared data
+    let recyclableItems = RecyclableItem.allItems
 
     var body: some View {
         NavigationView {
@@ -26,25 +16,27 @@ struct HomeView: View {
                         .padding()
                         .background(Color.green.opacity(0.7))
                         .cornerRadius(10)
-                        .padding(.top, 44) // Padding to compensate for the safe area at the top
-                    
-                    LazyVGrid(columns: [GridItem(.adaptive(minimum: 150))], spacing: 20) {
-                        ForEach(recyclableItems, id: \.title) { item in
-                            NavigationLink(destination: RecycleMapViewController(item: item)) {
-                                ZStack {
-                                    Image(item.imageName) // Use image as background, make sure these images exist in your assets
-                                        .resizable()
-                                        .scaledToFill()
-                                        .frame(width: 150, height: 150)
-                                        .clipped()
+                        .padding(.top, 44)
 
-                                    Text(item.title)
-                                        .foregroundColor(.white)
-                                        .font(.headline) // Adjust font style if necessary
+                    LazyVGrid(columns: [GridItem(.adaptive(minimum: 150))], spacing: 20) {
+                        ForEach(recyclableItems) { item in
+                            NavigationLink(destination: Map_TestView(item: item)) {
+                                ZStack {
+                                    Rectangle()
+                                        .foregroundColor(.green.opacity(0.7)) // Apply same opacity as the text background
+                                        .frame(width: 150, height: 150)
+                                        .cornerRadius(8)
+                                    VStack {
+                                        Image(item.imageName)
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(width: 130, height: 100) // Adjust dimensions to ensure it fits inside
+                                        Text(item.title)
+                                            .foregroundColor(.white)
+                                            .font(.headline)
+                                          
+                                    }
                                 }
-                                .background(Color.white.opacity(0.5)) // Applying the background to the whole ZStack
-                                .cornerRadius(8)
-                                .frame(width: 150, height: 150) // Set frame for ZStack to control size
                             }
                         }
                     }
@@ -58,14 +50,6 @@ struct HomeView: View {
                     .edgesIgnoringSafeArea(.all)
             )
         }
-    }
-}
-
-struct RecycleMapViewController: View {
-    var item: RecyclableItem
-    
-    var body: some View {
-        Text("Mapa para: \(item.title)")
     }
 }
 
