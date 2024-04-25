@@ -41,6 +41,7 @@
 		065106032BDAFEE400836379 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 065106022BDAFEE400836379 /* FirebaseRemoteConfigSwift */; };
 		065106052BDAFEE400836379 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 065106042BDAFEE400836379 /* FirebaseStorage */; };
 		065106072BDAFEE400836379 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 065106062BDAFEE400836379 /* FirebaseStorageCombine-Community */; };
+		065106092BDB04C100836379 /* RecyclableItemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065106082BDB04C100836379 /* RecyclableItemsViewModel.swift */; };
 		0692AC622BCEF4240013FBD6 /* ManageStoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0692AC612BCEF4240013FBD6 /* ManageStoreView.swift */; };
 		06F41AD52BC5BF1900AA19DF /* PlastiMap_ProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F41AD42BC5BF1900AA19DF /* PlastiMap_ProjectApp.swift */; };
 		06F41AD72BC5BF1900AA19DF /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F41AD62BC5BF1900AA19DF /* WelcomeView.swift */; };
@@ -74,6 +75,7 @@
 		0640563B2BC997EB00A40F96 /* SellsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellsView.swift; sourceTree = "<group>"; };
 		065105CC2BD9AF8800836379 /* RecyclableItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecyclableItem.swift; sourceTree = "<group>"; };
 		065105D22BD9CF2F00836379 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		065106082BDB04C100836379 /* RecyclableItemsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecyclableItemsViewModel.swift; sourceTree = "<group>"; };
 		0692AC612BCEF4240013FBD6 /* ManageStoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageStoreView.swift; sourceTree = "<group>"; };
 		06F41AD12BC5BF1900AA19DF /* PlastiMap_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlastiMap_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06F41AD42BC5BF1900AA19DF /* PlastiMap_ProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlastiMap_ProjectApp.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				065105CC2BD9AF8800836379 /* RecyclableItem.swift */,
+				065106082BDB04C100836379 /* RecyclableItemsViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				065105CD2BD9AF8800836379 /* RecyclableItem.swift in Sources */,
 				06F41AD72BC5BF1900AA19DF /* WelcomeView.swift in Sources */,
 				064056382BC8901C00A40F96 /* Map_TestView.swift in Sources */,
+				065106092BDB04C100836379 /* RecyclableItemsViewModel.swift in Sources */,
 				0640563A2BC997D700A40F96 /* MenuTabView.swift in Sources */,
 				064056342BC88EF400A40F96 /* SellView.swift in Sources */,
 				06F41AFF2BC5C3A500AA19DF /* HomeView.swift in Sources */,
