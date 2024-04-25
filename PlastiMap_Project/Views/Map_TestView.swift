@@ -68,7 +68,7 @@ struct Map_TestView: View {
                             .padding(.bottom)
                         }
                     } else {
-                        Text("No hay selección")
+                        Text("Presione un pin dentro del mapa")
                             .padding()
                             .frame(maxWidth: .infinity)
                             .background(Color.white)
