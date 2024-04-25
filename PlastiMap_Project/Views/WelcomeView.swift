@@ -1,5 +1,6 @@
 import SwiftUI
 import FirebaseAuth
+import FirebaseFirestore
 
 struct WelcomeView: View {
     @State var email = ""
@@ -91,6 +92,8 @@ struct WelcomeView: View {
 struct RegistrationView: View {
     @Binding var email: String
     @Binding var password: String
+    @State private var name: String = ""
+    @State private var phoneNumber: String = ""
     @Environment(\.presentationMode) var presentationMode
     @State private var showingAlert = false
     @State private var alertMessage = ""
@@ -104,6 +107,13 @@ struct RegistrationView: View {
                     .fontWeight(.bold)
                     .foregroundColor(.white)
                 
+                TextField("Nombre", text: $name)
+                    .padding()
+                    .background(Color.white)
+                    .cornerRadius(5.0)
+                    .disableAutocorrection(true)
+                    .autocapitalization(.none)
+                
                 TextField("Email", text: $email)
                     .padding()
                     .background(Color.white)
@@ -111,13 +121,20 @@ struct RegistrationView: View {
                     .disableAutocorrection(true)
                     .autocapitalization(.none)
                 
-                SecureField("Password", text: $password)
+                SecureField("Contraseña", text: $password)
                     .padding()
                     .background(Color.white)
                     .cornerRadius(5.0)
                     .disableAutocorrection(true)
                     .autocapitalization(.none)
-                
+
+                TextField("Teléfono", text: $phoneNumber)
+                    .padding()
+                    .background(Color.white)
+                    .cornerRadius(5.0)
+                    .disableAutocorrection(true)
+                    .autocapitalization(.none)
+
                 Button("Registrarme") {
                     register()
                 }
@@ -140,7 +157,22 @@ struct RegistrationView: View {
                 self.showingAlert = true
             } else {
                 print("Registration successful")
-                self.presentationMode.wrappedValue.dismiss()
+                // Aquí guardamos la información adicional en Firestore
+                if let userId = result?.user.uid {
+                    let db = Firestore.firestore()
+                    db.collection("users").document(userId).setData([
+                        "name": name,
+                        "email": email,
+                        "phoneNumber": phoneNumber
+                    ]) { error in
+                        if let error = error {
+                            print("Error writing document: \(error)")
+                        } else {
+                            print("Document successfully written!")
+                            self.presentationMode.wrappedValue.dismiss()
+                        }
+                    }
+                }
             }
         }
     }

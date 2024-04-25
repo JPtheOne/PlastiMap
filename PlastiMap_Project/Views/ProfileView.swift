@@ -1,9 +1,11 @@
 import SwiftUI
+import FirebaseAuth
+import FirebaseFirestore
 
 struct ProfileView: View {
-    @State private var username: String = "JohnDoe"
-    @State private var email: String = "john.doe@example.com"
-    @State private var phoneNumber: String = "123-456-7890"
+    @State private var username: String = ""
+    @State private var email: String = ""
+    @State private var phoneNumber: String = ""
 
     var body: some View {
         NavigationView {
@@ -37,9 +39,7 @@ struct ProfileView: View {
                             .cornerRadius(8)
                             .foregroundColor(.black)
 
-                        Button(action: {
-                            // Action for saving changes
-                        }) {
+                        Button(action: saveChanges) {
                             Text("Save Changes")
                                 .foregroundColor(.white)
                                 .frame(maxWidth: .infinity)
@@ -60,6 +60,46 @@ struct ProfileView: View {
                     .scaledToFill()
                     .edgesIgnoringSafeArea(.all)
             )
+        }
+        .onAppear(perform: loadUserData)
+    }
+
+    func loadUserData() {
+        guard let userId = Auth.auth().currentUser?.uid else {
+            print("No user logged in")
+            return
+        }
+
+        let db = Firestore.firestore()
+        db.collection("users").document(userId).getDocument { (document, error) in
+            if let document = document, document.exists {
+                let data = document.data()
+                username = data?["name"] as? String ?? ""
+                email = data?["email"] as? String ?? ""
+                phoneNumber = data?["phoneNumber"] as? String ?? ""
+            } else {
+                print("Document does not exist or failed to load")
+            }
+        }
+    }
+
+    func saveChanges() {
+        guard let userId = Auth.auth().currentUser?.uid else {
+            print("No user logged in")
+            return
+        }
+
+        let db = Firestore.firestore()
+        db.collection("users").document(userId).updateData([
+            "name": username,
+            "email": email,
+            "phoneNumber": phoneNumber
+        ]) { error in
+            if let error = error {
+                print("Error updating document: \(error)")
+            } else {
+                print("Document successfully updated")
+            }
         }
     }
 }
