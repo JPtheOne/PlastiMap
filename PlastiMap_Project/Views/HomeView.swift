@@ -1,6 +1,6 @@
 
 import SwiftUI
-import MapKit
+//import MapKit
 
 struct HomeView: View {
     // Access the shared data

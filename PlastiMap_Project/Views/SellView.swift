@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct Store: Identifiable {
+struct Store1: Identifiable {
     let id = UUID() // Add an id property for ForEach to use
     var name: String
     var latitude: Double
@@ -11,10 +11,10 @@ struct Store: Identifiable {
 }
 
 struct SellView: View {
-    let stores: [Store] = [
-        Store(name: "Plasticos Chela", latitude: 19.0, longitude: 13.0, material: "Plastico", pricePerKg: 45, imageName: "store"),
-        Store(name: "Metales Juan", latitude: 19.5, longitude: 13.5, material: "Metal", pricePerKg: 50, imageName: "store"),
-        Store(name: "Papel Recycle", latitude: 20.0, longitude: 14.0, material: "Papel", pricePerKg: 10, imageName: "store")
+    let stores: [Store1] = [
+        Store1(name: "Plasticos Chela", latitude: 19.0, longitude: 13.0, material: "Plastico", pricePerKg: 45, imageName: "store"),
+        Store1(name: "Metales Juan", latitude: 19.5, longitude: 13.5, material: "Metal", pricePerKg: 50, imageName: "store"),
+        Store1(name: "Papel Recycle", latitude: 20.0, longitude: 14.0, material: "Papel", pricePerKg: 10, imageName: "store")
     ]
     
     var body: some View {

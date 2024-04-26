@@ -41,7 +41,10 @@
 		065106032BDAFEE400836379 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 065106022BDAFEE400836379 /* FirebaseRemoteConfigSwift */; };
 		065106052BDAFEE400836379 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 065106042BDAFEE400836379 /* FirebaseStorage */; };
 		065106072BDAFEE400836379 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 065106062BDAFEE400836379 /* FirebaseStorageCombine-Community */; };
-		065106092BDB04C100836379 /* RecyclableItemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065106082BDB04C100836379 /* RecyclableItemsViewModel.swift */; };
+		0651060F2BDC415500836379 /* StoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0651060E2BDC415500836379 /* StoreViewModel.swift */; };
+		065106112BDC417300836379 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065106102BDC417300836379 /* Store.swift */; };
+		065106132BDC41A100836379 /* StoreManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065106122BDC41A100836379 /* StoreManagerView.swift */; };
+		065106152BDC5ED600836379 /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065106142BDC5ED600836379 /* ScoreView.swift */; };
 		0692AC622BCEF4240013FBD6 /* ManageStoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0692AC612BCEF4240013FBD6 /* ManageStoreView.swift */; };
 		06F41AD52BC5BF1900AA19DF /* PlastiMap_ProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F41AD42BC5BF1900AA19DF /* PlastiMap_ProjectApp.swift */; };
 		06F41AD72BC5BF1900AA19DF /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F41AD62BC5BF1900AA19DF /* WelcomeView.swift */; };
@@ -75,7 +78,10 @@
 		0640563B2BC997EB00A40F96 /* SellsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellsView.swift; sourceTree = "<group>"; };
 		065105CC2BD9AF8800836379 /* RecyclableItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecyclableItem.swift; sourceTree = "<group>"; };
 		065105D22BD9CF2F00836379 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		065106082BDB04C100836379 /* RecyclableItemsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecyclableItemsViewModel.swift; sourceTree = "<group>"; };
+		0651060E2BDC415500836379 /* StoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewModel.swift; sourceTree = "<group>"; };
+		065106102BDC417300836379 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		065106122BDC41A100836379 /* StoreManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManagerView.swift; sourceTree = "<group>"; };
+		065106142BDC5ED600836379 /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
 		0692AC612BCEF4240013FBD6 /* ManageStoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageStoreView.swift; sourceTree = "<group>"; };
 		06F41AD12BC5BF1900AA19DF /* PlastiMap_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlastiMap_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06F41AD42BC5BF1900AA19DF /* PlastiMap_ProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlastiMap_ProjectApp.swift; sourceTree = "<group>"; };
@@ -151,6 +157,8 @@
 				06F41AFE2BC5C3A500AA19DF /* HomeView.swift */,
 				06F41AD62BC5BF1900AA19DF /* WelcomeView.swift */,
 				065105CB2BD9AF6700836379 /* Models */,
+				065106122BDC41A100836379 /* StoreManagerView.swift */,
+				065106142BDC5ED600836379 /* ScoreView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -159,7 +167,8 @@
 			isa = PBXGroup;
 			children = (
 				065105CC2BD9AF8800836379 /* RecyclableItem.swift */,
-				065106082BDB04C100836379 /* RecyclableItemsViewModel.swift */,
+				0651060E2BDC415500836379 /* StoreViewModel.swift */,
+				065106102BDC417300836379 /* Store.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -375,14 +384,17 @@
 			files = (
 				0640563C2BC997EB00A40F96 /* SellsView.swift in Sources */,
 				0692AC622BCEF4240013FBD6 /* ManageStoreView.swift in Sources */,
+				065106132BDC41A100836379 /* StoreManagerView.swift in Sources */,
 				065105CD2BD9AF8800836379 /* RecyclableItem.swift in Sources */,
+				065106112BDC417300836379 /* Store.swift in Sources */,
 				06F41AD72BC5BF1900AA19DF /* WelcomeView.swift in Sources */,
 				064056382BC8901C00A40F96 /* Map_TestView.swift in Sources */,
-				065106092BDB04C100836379 /* RecyclableItemsViewModel.swift in Sources */,
 				0640563A2BC997D700A40F96 /* MenuTabView.swift in Sources */,
 				064056342BC88EF400A40F96 /* SellView.swift in Sources */,
 				06F41AFF2BC5C3A500AA19DF /* HomeView.swift in Sources */,
 				064056362BC88F0700A40F96 /* ProfileView.swift in Sources */,
+				065106152BDC5ED600836379 /* ScoreView.swift in Sources */,
+				0651060F2BDC415500836379 /* StoreViewModel.swift in Sources */,
 				06F41AD52BC5BF1900AA19DF /* PlastiMap_ProjectApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

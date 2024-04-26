@@ -2,7 +2,7 @@
 //  FireBaseTestApp.swift
 //  FireBaseTest
 //
-//  Created by Daniel Gonzalez on 27/02/24.
+
 //
 
 import SwiftUI
