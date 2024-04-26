@@ -10,31 +10,31 @@ struct DashboardView: View {
         VStack {
             Text(title)
                 .font(.headline)
-                .foregroundColor(.primary)  // Uses the default foreground color adapted to Dark/Light mode
+                .foregroundColor(.primary)
                 .padding(.top, 8)
 
             Text(value)
-                .font(.system(size: 24, weight: .bold, design: .rounded))  // Making the value stand out more
+                .font(.system(size: 24, weight: .bold, design: .rounded))
                 .padding(.vertical, 12)
 
-            HStack(spacing: 40) {  // Increased spacing for better touch targets
+            HStack(spacing: 40) {
                 Button(action: decrementAction) {
                     Image(systemName: "minus.circle.fill")
-                        .font(.system(size: 36))  // Larger touch target
+                        .font(.system(size: 36))
                         .foregroundColor(.red)
                 }
 
                 Button(action: incrementAction) {
                     Image(systemName: "plus.circle.fill")
-                        .font(.system(size: 36))  // Larger touch target
+                        .font(.system(size: 36))
                         .foregroundColor(.green)
                 }
             }
             .padding(.bottom, 8)
         }
         .padding(.horizontal)
-        .background(Color.white.opacity(0.7))  // Slightly higher opacity for better readability
+        .background(Color.white.opacity(0.7))
         .cornerRadius(12)
-        .shadow(color: Color.black.opacity(0.1), radius: 8, x: 0, y: 4)  // Subtle shadow for depth
+        .shadow(color: Color.black.opacity(0.1), radius: 8, x: 0, y: 4)
     }
 }
