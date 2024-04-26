@@ -22,10 +22,10 @@ struct MenuTabView: View {
                 }
                 .background(Color.white) // Fondo blanco para el contenido de este tab
             
-            SellView()
+            ScoreView()
                 .tabItem {
-                    Image(systemName: "dollarsign.circle.fill")
-                    Text("Venta")
+                    Image(systemName: "chart.bar.fill")
+                    Text("Puntos")
                 }
                 .background(Color.white) // Fondo blanco para el contenido de este tab
             

@@ -45,6 +45,8 @@
 		065106112BDC417300836379 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065106102BDC417300836379 /* Store.swift */; };
 		065106132BDC41A100836379 /* StoreManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065106122BDC41A100836379 /* StoreManagerView.swift */; };
 		065106152BDC5ED600836379 /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065106142BDC5ED600836379 /* ScoreView.swift */; };
+		065106182BDC671700836379 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 065106172BDC671700836379 /* SwiftUICharts */; };
+		0651061A2BDC694900836379 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065106192BDC694900836379 /* DashboardView.swift */; };
 		0692AC622BCEF4240013FBD6 /* ManageStoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0692AC612BCEF4240013FBD6 /* ManageStoreView.swift */; };
 		06F41AD52BC5BF1900AA19DF /* PlastiMap_ProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F41AD42BC5BF1900AA19DF /* PlastiMap_ProjectApp.swift */; };
 		06F41AD72BC5BF1900AA19DF /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F41AD62BC5BF1900AA19DF /* WelcomeView.swift */; };
@@ -82,6 +84,7 @@
 		065106102BDC417300836379 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		065106122BDC41A100836379 /* StoreManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManagerView.swift; sourceTree = "<group>"; };
 		065106142BDC5ED600836379 /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
+		065106192BDC694900836379 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		0692AC612BCEF4240013FBD6 /* ManageStoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageStoreView.swift; sourceTree = "<group>"; };
 		06F41AD12BC5BF1900AA19DF /* PlastiMap_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlastiMap_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06F41AD42BC5BF1900AA19DF /* PlastiMap_ProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlastiMap_ProjectApp.swift; sourceTree = "<group>"; };
@@ -99,6 +102,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				065105E52BDAFEE300836379 /* FirebaseDatabase in Frameworks */,
+				065106182BDC671700836379 /* SwiftUICharts in Frameworks */,
 				065105F32BDAFEE300836379 /* FirebaseFunctionsCombine-Community in Frameworks */,
 				065105EB2BDAFEE300836379 /* FirebaseFirestore in Frameworks */,
 				065105DF2BDAFEE300836379 /* FirebaseAppDistribution-Beta in Frameworks */,
@@ -159,6 +163,7 @@
 				065105CB2BD9AF6700836379 /* Models */,
 				065106122BDC41A100836379 /* StoreManagerView.swift */,
 				065106142BDC5ED600836379 /* ScoreView.swift */,
+				065106192BDC694900836379 /* DashboardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -263,6 +268,7 @@
 				065106022BDAFEE400836379 /* FirebaseRemoteConfigSwift */,
 				065106042BDAFEE400836379 /* FirebaseStorage */,
 				065106062BDAFEE400836379 /* FirebaseStorageCombine-Community */,
+				065106172BDC671700836379 /* SwiftUICharts */,
 			);
 			productName = PlastiMap_Project;
 			productReference = 06F41AD12BC5BF1900AA19DF /* PlastiMap_Project.app */;
@@ -338,6 +344,7 @@
 			mainGroup = 06F41AC82BC5BF1900AA19DF;
 			packageReferences = (
 				065105CE2BD9CDB700836379 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				065106162BDC671700836379 /* XCRemoteSwiftPackageReference "ChartView" */,
 			);
 			productRefGroup = 06F41AD22BC5BF1900AA19DF /* Products */;
 			projectDirPath = "";
@@ -389,6 +396,7 @@
 				065106112BDC417300836379 /* Store.swift in Sources */,
 				06F41AD72BC5BF1900AA19DF /* WelcomeView.swift in Sources */,
 				064056382BC8901C00A40F96 /* Map_TestView.swift in Sources */,
+				0651061A2BDC694900836379 /* DashboardView.swift in Sources */,
 				0640563A2BC997D700A40F96 /* MenuTabView.swift in Sources */,
 				064056342BC88EF400A40F96 /* SellView.swift in Sources */,
 				06F41AFF2BC5C3A500AA19DF /* HomeView.swift in Sources */,
@@ -730,6 +738,14 @@
 				minimumVersion = 10.24.0;
 			};
 		};
+		065106162BDC671700836379 /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.5;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -867,6 +883,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 065105CE2BD9CDB700836379 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseStorageCombine-Community";
+		};
+		065106172BDC671700836379 /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 065106162BDC671700836379 /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
