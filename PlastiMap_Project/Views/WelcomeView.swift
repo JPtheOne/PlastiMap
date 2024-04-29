@@ -18,10 +18,10 @@ struct WelcomeView: View {
                     Color.green.ignoresSafeArea()
                     
                     VStack {
-                        Image(systemName: "leaf.fill")
+                        Image("logito")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 100, height: 100)
+                            .frame(width: 300, height: 300)
                             .foregroundColor(.white)
                         
                         Text("Welcome to PlastiMap")
